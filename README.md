@@ -6,6 +6,9 @@ Java practice repo used to upload examples.
 - Static Initialization Blocks
 - Initializing Instance Members
 
+## Collections
+- Starting with Collections from Oracle documentation 
+
 ## Lambdas
 - Starting with functional programing. Oracle documentation 
 
