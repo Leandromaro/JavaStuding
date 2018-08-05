@@ -13,18 +13,23 @@ public class Main {
         people.add(personOne);
         people.add(personTwo);
         people.add(personThree);
-
+        // Stores its elements in a hash table, is the best-performing implementation;
+        // however it makes no guarantees concerning the order of iteration
+        System.out.printf("HashSet:\n");
+        Set<String> hashSet = people.stream()
+                .map(Person::getName)
+                .collect(Collectors.toCollection(HashSet::new));
+        hashSet.stream().forEach(System.out::println);
+        // Stores its elements in a red-black tree, orders its elements based on their values;
+        // it is substantially slower than HashSet
         Set<String> set = people.stream()
                 .map(Person::getName)
                 .collect(Collectors.toCollection(TreeSet::new));
         System.out.printf("TreeSet:\n");
         set.stream().forEach(System.out::println);
-        System.out.printf("HashSet:\n");
-        HashSet<String> hashSet = people.stream()
-                .map(Person::getName)
-                .collect(Collectors.toCollection(HashSet::new));
-        hashSet.stream().forEach(System.out::println);
         System.out.printf("LinkedHashSet:\n");
+        // It's implemented as a hash table with a linked list running through it,
+        // orders its elements based on the order in which they were inserted into the set (insertion-order)
         Set<String> LinkedHashSet = people.stream()
                 .map(Person::getName)
                 .collect(Collectors.toCollection(LinkedHashSet::new));
