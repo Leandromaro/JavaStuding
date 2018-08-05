@@ -20,6 +20,7 @@ public class Main {
                 .map(Person::getName)
                 .collect(Collectors.toCollection(HashSet::new));
         hashSet.stream().forEach(System.out::println);
+        System.out.printf("\n");
         // Stores its elements in a red-black tree, orders its elements based on their values;
         // it is substantially slower than HashSet
         Set<String> set = people.stream()
@@ -27,6 +28,7 @@ public class Main {
                 .collect(Collectors.toCollection(TreeSet::new));
         System.out.printf("TreeSet:\n");
         set.stream().forEach(System.out::println);
+        System.out.printf("\n");
         System.out.printf("LinkedHashSet:\n");
         // It's implemented as a hash table with a linked list running through it,
         // orders its elements based on the order in which they were inserted into the set (insertion-order)
@@ -34,7 +36,6 @@ public class Main {
                 .map(Person::getName)
                 .collect(Collectors.toCollection(LinkedHashSet::new));
         LinkedHashSet.stream().forEach(System.out::println);
-
     }
 
     class Person{
