@@ -7,7 +7,7 @@ Java practice repo used to upload examples.
 - Initializing Instance Members
 
 ## Collections
-- Starting with Collections from Oracle documentation 
+- Set Collections examples
 
 ## Lambdas
 - Starting with functional programing. Oracle documentation 
