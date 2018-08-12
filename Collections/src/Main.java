@@ -1,4 +1,9 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -6,9 +11,9 @@ public class Main {
     public static Collection<Person> people = new ArrayList<>();
 
     public static void  main(String[]args){
-        Person personOne = new Main().new Person("Leandro", "Maro", Sex.male);
-        Person personTwo = new Main().new Person("Leandro", "Maro", Sex.male);
-        Person personThree = new Main().new Person("Eugenia", "Nuñez", Sex.female);
+        Person personOne = new Main().new Person("Leandro", "Maro", Gender.male);
+        Person personTwo = new Main().new Person("Leandro", "Maro", Gender.male);
+        Person personThree = new Main().new Person("Eugenia", "Nuñez", Gender.female);
 
         people.add(personOne);
         people.add(personTwo);
@@ -42,12 +47,12 @@ public class Main {
 
         private String name;
         private String lastName;
-        private Sex sex;
+        private Gender gender;
 
-        public Person(String name, String lastName, Sex sex) {
+        public Person(String name, String lastName, Gender gender) {
             this.name = name;
             this.lastName = lastName;
-            this.sex = sex;
+            this.gender = gender;
         }
 
         public String getName() {
@@ -66,16 +71,16 @@ public class Main {
             this.lastName = lastName;
         }
 
-        public Sex getSex() {
-            return sex;
+        public Gender getGender() {
+            return gender;
         }
 
-        public void setSex(Sex sex) {
-            this.sex = sex;
+        public void setGender(Gender gender) {
+            this.gender = gender;
         }
     }
 
-    enum Sex{
+    enum Gender {
         male, female;
     }
 }
