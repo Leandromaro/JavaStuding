@@ -9,6 +9,7 @@ Java practice repo used to upload examples.
 ## Collections
 - Set Collections examples
 - Maps Collections examples. How to create them from a List, using lambdas
+- Priority Queue with custom comparator
 
 ## Lambdas
 - Starting with functional programing. Oracle documentation 
