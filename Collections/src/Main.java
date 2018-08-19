@@ -49,6 +49,14 @@ public class Main {
         System.out.println(peopleMap.entrySet() + "\n");
         System.out.println(peopleMapByAge.values()+ "\n");
         System.out.println(peopleByCitySumAge.values()+ "\n");
+
+        // PriorityQueue with custom comparator
+        System.out.println("Priority Queue \n");
+        Queue<Person> list = new PriorityQueue<>(Comparator.comparingInt(Person::getAge));
+        list.add(new Main().new Person("Leandro", "Maro", Gender.MALE, 33, City.RESISTENCIA));
+        list.add(new Main().new Person("Leandro", "Maro", Gender.MALE, 33, City.RESISTENCIA));
+        list.add(new Main().new Person("Eugenia", "Nuñez", Gender.FEMALE, 30, City.CORRIENTES));
+        list.forEach(System.out::println);
     }
 
     class Person{
